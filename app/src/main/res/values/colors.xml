@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00CFBD</color>
+    <color name="colorPrimaryDark">#00CFBD</color>
+    <color name="colorAccent">#00CFBD</color>
+    <!-- 半透明 -->
+    <color name="half_transparent">#80000000</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_007AFF">#007AFF</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_F1BF00">#F1BF00</color>
+    <color name="color_FF2626">#FF2626</color>
+    <color name="color_D8D8D8">#D8D8D8</color>
+    <color name="color_f9f9f9">#f9f9f9</color>
+</resources>

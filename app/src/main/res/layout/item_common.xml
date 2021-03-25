@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.yunfu.help.view.CircleImageView
+            android:id="@+id/img_head"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:background="@mipmap/default_head"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:text="昵称"
+            android:layout_toRightOf="@id/img_head"
+            android:layout_marginLeft="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2012-03-12"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_toRightOf="@id/img_head"
+            android:layout_marginLeft="12dp"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_head"
+            android:layout_marginLeft="12dp"
+            android:layout_below="@id/img_head"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="27dp"
+            android:lineSpacingExtra="7dp"
+            android:text="评论内容评论内容评论内容评论内容"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_give_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_give_like"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@mipmap/common_like"/>
+
+                <TextView
+                    android:id="@+id/tv_like_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="3dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_report"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@mipmap/report"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+
+        <com.yunfu.help.view.MeasureListView
+            android:id="@+id/reply_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_content"
+            android:divider="@null"
+            android:layout_toRightOf="@id/img_head"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp">
+        </com.yunfu.help.view.MeasureListView>
+
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看更多回复"
+            android:textSize="13sp"
+            android:textColor="@color/color_666666"
+            android:layout_below="@id/reply_list"
+            android:layout_toRightOf="@id/img_head"
+            android:layout_marginLeft="12dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.50dp"
+        android:layout_marginTop="15dp"
+        android:background="#EBEBEB" />
+
+</LinearLayout>

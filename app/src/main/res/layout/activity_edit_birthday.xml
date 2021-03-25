@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white">
+
+    <include layout="@layout/head2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您的出生日期是？"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="年龄不同，热量消耗也不同，谢谢"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="#00CFBD"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/white">
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_year"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_month"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1.1"/>
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_date"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1.1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.yunfu.help.view.click.ClickTextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_sms_code"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+</RelativeLayout>

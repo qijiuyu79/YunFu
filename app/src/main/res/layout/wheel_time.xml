@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_radius16_colorwhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="@color/color_999999"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d8d8d8"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_year"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_month"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1.1"/>
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_date"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1.1"/>
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_hour"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1.1"/>
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_minute"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1.1"/>
+
+            <com.yunfu.help.view.CycleWheelView
+                android:id="@+id/wv_seconds"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1.1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
