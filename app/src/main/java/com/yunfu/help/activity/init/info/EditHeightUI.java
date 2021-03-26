@@ -1,5 +1,6 @@
 package com.yunfu.help.activity.init.info;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -62,7 +63,9 @@ public class EditHeightUI extends BaseActivity {
                  finish();
                 break;
             case R.id.tv_next:
-                setClass(EditBirthdayUI.class);
+                Intent intent=new Intent(this,EditBirthdayUI.class);
+                intent.putExtra("height",tvHeight.getText().toString().trim());
+                startActivity(intent);
                 break;
             default:
                 break;

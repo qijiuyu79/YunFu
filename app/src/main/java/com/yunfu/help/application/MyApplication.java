@@ -8,7 +8,10 @@ import androidx.annotation.RequiresApi;
 
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
+import com.yunfu.help.bean.LoginBean;
 import com.yunfu.help.utils.ActivitysLifecycle;
+import com.yunfu.help.utils.JsonUtil;
+import com.yunfu.help.utils.SPUtil;
 
 public class MyApplication extends Application {
 
@@ -57,5 +60,15 @@ public class MyApplication extends Application {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
+    }
+
+
+    /**
+     * 获取登录对象
+     * @return
+     */
+    public static LoginBean.Content getLogin(){
+        final String msg= SPUtil.getInstance(getApplication()).getString(SPUtil.USER);
+        return (LoginBean.Content) JsonUtil.stringToObject(msg,LoginBean.Content.class);
     }
 }

@@ -16,6 +16,10 @@ public class SPUtil {
     private Editor editor;
     public final static String USERMESSAGE = "yan_guo_student";
     private static SPUtil sharUtil = null;
+    //登录的token
+    public final static String TOKEN="TOKEN";
+    //用户信息
+    public final static String USER="USER";
 
     public static Gson gson=new Gson();
     @SuppressLint("WrongConstant")

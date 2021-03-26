@@ -1,5 +1,6 @@
 package com.yunfu.help.activity.init.info;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.TextView;
@@ -32,6 +33,8 @@ public class EditBirthdayUI extends BaseActivity {
     @BindView(R.id.wv_date)
     CycleWheelView wvDate;
     private boolean isDay=false;
+    //身高
+    private String height;
 
     /**
      * 加载布局
@@ -51,6 +54,8 @@ public class EditBirthdayUI extends BaseActivity {
         super.initData();
         tvHead.setText("基本信息");
         ImmersionBar.with(this).statusBarColor(android.R.color.white).statusBarDarkFont(true).init();
+
+        height=getIntent().getStringExtra("height");
 
         listView.setLayoutManager(new GridLayoutManager(activity, 4));
         listView.setAdapter(new LineAdapter(this,1));
@@ -165,7 +170,10 @@ public class EditBirthdayUI extends BaseActivity {
                  finish();
                 break;
             case R.id.tv_next:
-                setClass(EditWeightUI.class);
+                Intent intent=new Intent(this,EditWeightUI.class);
+                intent.putExtra("height",height);
+                intent.putExtra("birthday",tvBirthday.getText().toString());
+                startActivity(intent);
                 break;
         }
     }

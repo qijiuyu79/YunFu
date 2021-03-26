@@ -7,26 +7,26 @@ import java.io.Serializable;
  */
 
 public class BaseBean implements Serializable {
-    private int code;
-    private String desc;
+    private String code;
+    private String message;
     private String token;
 
     public BaseBean(){}
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getMessage() {
+        return message;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public String getToken() {
@@ -38,7 +38,7 @@ public class BaseBean implements Serializable {
     }
 
     public boolean isSussess() {
-        if (code == 0) {
+        if (code.equals("SUCCESS")) {
             return true;
         }
         return false;

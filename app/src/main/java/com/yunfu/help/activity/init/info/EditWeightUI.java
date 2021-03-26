@@ -1,5 +1,6 @@
 package com.yunfu.help.activity.init.info;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -27,6 +28,10 @@ public class EditWeightUI extends BaseActivity {
     TextView tvWeight;
     @BindView(R.id.ruler_height)
     RulerView rulerHeight;
+    //身高
+    private String height;
+    //出生日期
+    private String birthday;
 
     /**
      * 加载布局
@@ -47,6 +52,9 @@ public class EditWeightUI extends BaseActivity {
         tvHead.setText("基本信息");
         ImmersionBar.with(this).statusBarColor(android.R.color.white).statusBarDarkFont(true).init();
 
+        height=getIntent().getStringExtra("height");
+        birthday=getIntent().getStringExtra("birthday");
+
         listView.setLayoutManager(new GridLayoutManager(activity, 4));
         listView.setAdapter(new LineAdapter(this,2));
 
@@ -63,7 +71,11 @@ public class EditWeightUI extends BaseActivity {
                  finish();
                 break;
             case R.id.tv_next:
-                setClass(EditDiseaseUI.class);
+                Intent intent=new Intent(this,EditDiseaseUI.class);
+                intent.putExtra("height",height);
+                intent.putExtra("birthday",birthday);
+                intent.putExtra("weight",tvWeight.getText().toString());
+                startActivity(intent);
                 break;
             default:
                 break;
